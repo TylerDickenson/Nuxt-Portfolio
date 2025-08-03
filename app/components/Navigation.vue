@@ -24,7 +24,9 @@ const navItems = [
   { to: '/about', label: 'About' },
   { to: '/skills', label: 'Skills' },
   { to: '/projects', label: 'Projects' },
+  { to: '/journey', label: 'Journey' },
   { to: '/contact', label: 'Contact' }
+
 ]
 
 const showNavbar = ref(false)
