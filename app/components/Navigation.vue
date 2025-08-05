@@ -1,12 +1,12 @@
 <template>
   <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 flex justify-center px-4"
        :class="{ 'translate-y-0': showNavbar, '-translate-y-full': !showNavbar }">
-    <div class="border-2 border-gray-200 rounded-full px-6 sm:px-10 py-3 mt-4 bg-white shadow flex items-center justify-center w-fit">
-      <ul class="flex gap-4 sm:gap-8 list-none m-0 p-0">
+    <div class="border-2 border-gray-200 rounded-full px-5 sm:px-10 py-2 mt-4 bg-white shadow flex items-center justify-center w-fit">
+      <ul class="flex gap-3 sm:gap-4 list-none m-0 p-0">
         <li v-for="item in navItems" :key="item.to">
           <NuxtLink
             :to="item.to"
-            class="px-2 sm:px-3 py-2 rounded-full font-medium transition-colors duration-200 hover:bg-blue-50 text-sm sm:text-base"
+            class="px-2 sm:px-3 py-2 rounded-full font-medium transition-colors duration-200 hover:scale-110 text-sm sm:text-base text-gray-800 hover:text-blue-600"
           >
             {{ item.label }}
           </NuxtLink>
@@ -24,8 +24,7 @@ const navItems = [
   { to: '/about', label: 'About' },
   { to: '/skills', label: 'Skills' },
   { to: '/projects', label: 'Projects' },
-  { to: '/journey', label: 'Journey' },
-  { to: '/contact', label: 'Contact' }
+  { to: '/journey', label: 'Journey' }
 
 ]
 
