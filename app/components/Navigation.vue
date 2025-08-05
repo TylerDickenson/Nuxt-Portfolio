@@ -21,10 +21,10 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const navItems = [
   { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
-  { to: '/skills', label: 'Skills' },
+  { to: '/#about', label: 'About' },
+  { to: '/#skills', label: 'Skills' },
   { to: '/projects', label: 'Projects' },
-  { to: '/journey', label: 'Journey' }
+  { to: '/#journey', label: 'Journey' }
 
 ]
 
