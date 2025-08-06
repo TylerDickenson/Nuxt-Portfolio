@@ -2,7 +2,11 @@
 module.exports = {
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'cream': '#FFFCF5', // Very subtle off-white with a hint of warmth
+      },
+    },
   },
   plugins: [],
 }
