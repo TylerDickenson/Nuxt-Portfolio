@@ -23,7 +23,7 @@ const navItems = [
   { to: '/', label: 'Home' },
   { to: '/#about', label: 'About' },
   { to: '/#skills', label: 'Skills' },
-  { to: '/projects', label: 'Projects' },
+  { to: '/#featured-projects', label: 'Projects' },
   { to: '/#journey', label: 'Journey' }
 
 ]

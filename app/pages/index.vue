@@ -3,6 +3,7 @@
     <Hero />
     <About />
     <Skills />
+    <FeatuerdProjects />
     <Journey />
   </section>
 </template>
