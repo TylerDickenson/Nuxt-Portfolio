@@ -7,11 +7,16 @@
         <div class="timeline-bar" data-aos="fade-in" data-aos-duration="500"></div>
         
         <div class="timeline-items">
+
+          <div class="diamond-wrapper top" data-aos="zoom-in" data-aos-delay="50">
+            <div class="timeline-diamond top"></div>
+          </div>
+
           <div class="timeline-item right" data-aos="fade-left" data-aos-delay="200">
             <div class="timeline-diamond" data-aos="zoom-in" data-aos-delay="100"></div>
             <div class="timeline-content">
               <div class="timeline-connector"></div>
-              <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="bg-white p-6 diagonal-card shadow-md">
                 <h3 class="text-xl font-bold mb-2 text-slate-800">August 2025</h3>
                 <h4 class="text-lg font-semibold mb-2 text-slate-700">Looking for Opportunities</h4>
                 <p class="text-slate-600">Looking to start my career and gain practical experience in the tech/finance industry.</p>
@@ -23,19 +28,19 @@
             <div class="timeline-diamond" data-aos="zoom-in" data-aos-delay="150"></div>
             <div class="timeline-content">
               <div class="timeline-connector"></div>
-              <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="bg-white p-6 diagonal-card shadow-md">
                 <h3 class="text-xl font-bold mb-2 text-slate-800">2022 - 2025</h3>
                 <h4 class="text-lg font-semibold mb-2 text-slate-700">Graduated University</h4>
                 <p class="text-slate-600">Graduated with a BSc in Computer Science with honours from Swansea University with a 2:1 achieved.</p>
               </div>
             </div>
           </div>
-        <div class="timeline-items">
+          
           <div class="timeline-item right" data-aos="fade-left" data-aos-delay="200">
             <div class="timeline-diamond" data-aos="zoom-in" data-aos-delay="100"></div>
             <div class="timeline-content">
               <div class="timeline-connector"></div>
-              <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="bg-white p-6 diagonal-card shadow-md">
                 <h3 class="text-xl font-bold mb-2 text-slate-800">2022</h3>
                 <h4 class="text-lg font-semibold mb-2 text-slate-700">Applied to University</h4>
                 <p class="text-slate-600">Applied to Universities to pursue a career in Computer Science, ultimately deciding to go to Swansea University.</p>
@@ -47,7 +52,7 @@
             <div class="timeline-diamond" data-aos="zoom-in" data-aos-delay="150"></div>
             <div class="timeline-content">
               <div class="timeline-connector"></div>
-              <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="bg-white p-6 diagonal-card shadow-md">
                 <h3 class="text-xl font-bold mb-2 text-slate-800">2020 - 2022</h3>
                 <h4 class="text-lg font-semibold mb-2 text-slate-700">A Level Computer Science</h4>
                 <p class="text-slate-600">Pick Computer Science as one of my A Level subjects, igniting my passion for programming and desire to learn more.</p>
@@ -59,7 +64,7 @@
             <div class="timeline-diamond" data-aos="zoom-in" data-aos-delay="200"></div>
             <div class="timeline-content">
               <div class="timeline-connector"></div>
-              <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="bg-white p-6 diagonal-card shadow-md">
                 <h3 class="text-xl font-bold mb-2 text-slate-800">2015</h3>
                 <h4 class="text-lg font-semibold mb-2 text-slate-700">First Website</h4>
                 <p class="text-slate-600">In a year 7 IT class, I created my first website using HTML.</p>
@@ -67,13 +72,13 @@
             </div>
           </div>
           
-        
-          
-          <div class="timeline-diamond bottom" data-aos="zoom-in" data-aos-delay="300"></div>
+          <div class="diamond-wrapper bottom" data-aos="zoom-in" data-aos-delay="300">
+            <div class="timeline-diamond bottom"></div>
+          </div>
+
         </div>
       </div>
     </div>
-  </div>
   </section>
 </template>
 
@@ -114,8 +119,25 @@
   z-index: 20;
 }
 
+.diamond-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.diamond-wrapper.top {
+  top: -30px;
+}
+
 .timeline-diamond.bottom {
-  bottom: -120px;
+  width: 30px;
+  height: 30px;
+}
+
+.timeline-diamond.top {
+  width: 30px;
+  height: 30px;
 }
 
 .timeline-content {
@@ -164,8 +186,42 @@
   left: calc(50% + 2px);
 }
 
-.timeline-diamond.bottom {
-  bottom: -120px;
-  left: calc(50% + 2px);
+
+.diagonal-card {
+  position: relative;
+  background-color: white;
+  clip-path: polygon(
+    10px 0,              
+    calc(100% - 10px) 0,  
+    100% 10px,           
+    100% calc(100% - 10px), 
+    calc(100% - 10px) 100%, 
+    10px 100%,           
+    0 calc(100% - 10px),   
+    0 10px                
+  );
+  border: none;
+}
+
+
+.diagonal-card::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background-color: lightgreen; 
+  z-index: -1;
+  clip-path: polygon(
+    13px 0,                
+    calc(100% - 7px) 0,   
+    100% 13px,           
+    100% calc(100% - 7px), 
+    calc(100% - 7px) 100%, 
+    13px 100%,            
+    0 calc(100% - 7px),   
+    0 13px                
+  );
 }
 </style>
