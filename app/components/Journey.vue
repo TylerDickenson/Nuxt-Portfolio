@@ -15,7 +15,7 @@
             :style="{
               top: '0',
               left: '50%',
-              marginLeft: boxInView ? '2px' : '600px',
+              marginLeft: boxInView ? '2px' : '550px',
               transform: 'translateY(12px)',
               transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
             }"
@@ -30,7 +30,7 @@
             :style="{
               top: 'calc(25% - 92px)',
               left: '50%',
-              marginLeft: secondBoxInView ? '-252px' : '-600px',
+              marginLeft: secondBoxInView ? '-352px' : '-550px',
               transform: 'translateY(-12px)',
               transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
             }"
@@ -46,7 +46,7 @@
             :style="{
               top: 'calc(25% - 91px)',
               left: '50%',
-              marginLeft: thirdBoxInView ? '2px' : '600px',
+              marginLeft: thirdBoxInView ? '2px' : '550px',
               transform: 'translateY(12px)',
               transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
             }"
@@ -61,7 +61,7 @@
             :style="{
               top: 'calc(25% - 41px)',
               left: '50%',
-              marginLeft: fourthBoxInView ? '-252px' : '-600px',
+              marginLeft: fourthBoxInView ? '-352px' : '-550px',
               transform: 'translateY(-12px)',
               transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
             }"
@@ -185,7 +185,7 @@ onUnmounted(() => {
   z-index: 3; 
 }
 .timeline-box-right {
-  width: 250px;
+  width: 350px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   position: relative;
@@ -206,7 +206,7 @@ onUnmounted(() => {
   z-index: 1;
 }
 .timeline-box-left {
-  width: 250px;
+  width: 350px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   position: relative;
