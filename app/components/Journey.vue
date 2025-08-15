@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-16 text-center text-slate-800">My Journey</h2>
       <div class="timeline-container w-full max-w-3xl mx-auto">
-        <div class="timeline-line w-1 bg-slate-600 mx-auto relative" :style="{ height: timelineHeight }">
+        <div class="timeline-line w-1 bg-slate-600 mx-auto relative" style="height: 70vh;">
           <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 0%"></div>
           <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 25%"></div>
           <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 50%"></div>
