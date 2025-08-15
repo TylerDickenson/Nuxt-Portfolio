@@ -25,18 +25,19 @@
             <p>Description text goes here.</p>
           </div>
           <div
+            ref="secondBox"
             class="timeline-box-left absolute bg-white border-2 p-4"
             :style="{
               top: 'calc(25% - 92px)',
               left: '50%',
-              marginLeft: '-252px', 
+              marginLeft: secondBoxInView ? '-252px' : '-600px',
               transform: 'translateY(-12px)',
               transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
             }"
           >
             <h3 class="text-xl font-bold">2026</h3>
-            <h4 class="text-lg">Second Title</h4>
-            <p>Second description goes here.</p>
+            <h4 class="text-lg">title 2 </h4>
+            <p>test descrip</p>
           </div>
         </div>
       </div>
@@ -50,12 +51,23 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const boxInView = ref(false)
 const firstBox = ref(null)
 
+const secondBoxInView = ref(false)
+const secondBox = ref(null)
+
 let observer = null
+let observer2 = null
 
 const handleIntersection = (entries) => {
   if (entries[0].isIntersecting) {
     boxInView.value = true
     if (observer && firstBox.value) observer.unobserve(firstBox.value)
+  }
+}
+
+const handleIntersection2 = (entries) => {
+  if (entries[0].isIntersecting) {
+    secondBoxInView.value = true
+    if (observer2 && secondBox.value) observer2.unobserve(secondBox.value)
   }
 }
 
@@ -66,11 +78,21 @@ onMounted(() => {
   if (firstBox.value) {
     observer.observe(firstBox.value)
   }
+
+  observer2 = new window.IntersectionObserver(handleIntersection2, {
+    threshold: 0.3,
+  })
+  if (secondBox.value) {
+    observer2.observe(secondBox.value)
+  }
 })
 
 onUnmounted(() => {
   if (observer && firstBox.value) {
     observer.unobserve(firstBox.value)
+  }
+  if (observer2 && secondBox.value) {
+    observer2.unobserve(secondBox.value)
   }
 })
 </script>
