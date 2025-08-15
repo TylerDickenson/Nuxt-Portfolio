@@ -39,6 +39,37 @@
             <h4 class="text-lg">title 2 </h4>
             <p>test descrip</p>
           </div>
+
+          <div
+            ref="thirdBox"
+            class="timeline-box-right absolute bg-white border-2 p-4"
+            :style="{
+              top: 'calc(25% - 91px)',
+              left: '50%',
+              marginLeft: thirdBoxInView ? '2px' : '600px',
+              transform: 'translateY(12px)',
+              transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
+            }"
+          >
+            <h3 class="text-xl font-bold">2027</h3>
+            <h4 class="text-lg">Title 3</h4>
+            <p>Description for 2027.</p>
+          </div>
+          <div
+            ref="fourthBox"
+            class="timeline-box-left absolute bg-white border-2 p-4"
+            :style="{
+              top: 'calc(25% - 41px)',
+              left: '50%',
+              marginLeft: fourthBoxInView ? '-252px' : '-600px',
+              transform: 'translateY(-12px)',
+              transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
+            }"
+          >
+            <h3 class="text-xl font-bold">2028</h3>
+            <h4 class="text-lg">Title 4</h4>
+            <p>Description for 2028.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -54,8 +85,16 @@ const firstBox = ref(null)
 const secondBoxInView = ref(false)
 const secondBox = ref(null)
 
+const thirdBoxInView = ref(false)
+const thirdBox = ref(null)
+
+const fourthBoxInView = ref(false)
+const fourthBox = ref(null)
+
 let observer = null
 let observer2 = null
+let observer3 = null
+let observer4 = null
 
 const handleIntersection = (entries) => {
   if (entries[0].isIntersecting) {
@@ -71,19 +110,44 @@ const handleIntersection2 = (entries) => {
   }
 }
 
+const handleIntersection3 = (entries) => {
+  if (entries[0].isIntersecting) {
+    thirdBoxInView.value = true
+    if (observer3 && thirdBox.value) observer3.unobserve(thirdBox.value)
+  }
+}
+const handleIntersection4 = (entries) => {
+  if (entries[0].isIntersecting) {
+    fourthBoxInView.value = true
+    if (observer4 && fourthBox.value) observer4.unobserve(fourthBox.value)
+  }
+}
+
 onMounted(() => {
   observer = new window.IntersectionObserver(handleIntersection, {
-    threshold: 0.3,
+    threshold: 0.5,
   })
   if (firstBox.value) {
     observer.observe(firstBox.value)
   }
 
   observer2 = new window.IntersectionObserver(handleIntersection2, {
-    threshold: 0.3,
+    threshold: 0.5,
   })
   if (secondBox.value) {
     observer2.observe(secondBox.value)
+  }
+  observer3 = new window.IntersectionObserver(handleIntersection3, {
+    threshold: 0.5,
+  })
+  if (thirdBox.value) {
+    observer3.observe(thirdBox.value)
+  }
+  observer4 = new window.IntersectionObserver(handleIntersection4, {
+    threshold: 0.5,
+  })
+  if (fourthBox.value) {
+    observer4.observe(fourthBox.value)
   }
 })
 
@@ -93,6 +157,12 @@ onUnmounted(() => {
   }
   if (observer2 && secondBox.value) {
     observer2.unobserve(secondBox.value)
+  }
+  if (observer3 && thirdBox.value) {
+    observer3.unobserve(thirdBox.value)
+  }
+  if (observer4 && fourthBox.value) {
+    observer4.unobserve(fourthBox.value)
   }
 })
 </script>
@@ -116,8 +186,8 @@ onUnmounted(() => {
 }
 .timeline-box-right {
   width: 250px;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   position: relative;
   background-color: white;
   z-index: 1;
@@ -137,8 +207,8 @@ onUnmounted(() => {
 }
 .timeline-box-left {
   width: 250px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   position: relative;
   background-color: white;
   z-index: 1;
