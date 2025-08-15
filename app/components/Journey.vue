@@ -1,81 +1,29 @@
 <template>
-  <section id="journey" class="min-h-[100vh] py-16 bg-cream">
+  <section id="journey" class="min-h-screen py-16 bg-cream">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-16 text-center text-slate-800">My Journey</h2>
-      
-      <div class="max-w-5xl mx-auto relative">
-        <div class="timeline-bar" data-aos="fade-in" data-aos-duration="500"></div>
-        
-        <div class="timeline-items">
-
-          <div class="diamond-wrapper top" data-aos="zoom-in" data-aos-delay="50">
-            <div class="timeline-diamond top"></div>
+      <div class="timeline-container w-full max-w-3xl mx-auto">
+        <div class="timeline-line w-1 bg-slate-600 mx-auto relative" :style="{ height: timelineHeight }">
+          <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 0%"></div>
+          <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 25%"></div>
+          <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 50%"></div>
+          <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 75%"></div>
+          <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 100%"></div>
+          <div
+            ref="firstBox"
+            class="timeline-box absolute bg-white border-2 p-4"
+            :style="{
+              top: '0',
+              left: '50%',
+              marginLeft: boxInView ? '2px' : '200px',
+              transform: 'translateY(12px)',
+              transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
+            }"
+          >
+            <h3 class="text-xl font-bold">2025</h3>
+            <h4 class="text-lg">Title Here</h4>
+            <p>Description text goes here.</p>
           </div>
-
-          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="200">
-            <div class="timeline-diamond" data-aos="zoom-in" data-aos-delay="100"></div>
-            <div class="timeline-content">
-              <div class="timeline-connector"></div>
-              <div class="bg-white p-6 diagonal-card shadow-md">
-                <h3 class="text-xl font-bold mb-2 text-slate-800">August 2025</h3>
-                <h4 class="text-lg font-semibold mb-2 text-slate-700">Looking for Opportunities</h4>
-                <p class="text-slate-600">Looking to start my career and gain practical experience in the tech/finance industry.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="timeline-item left" data-aos="fade-right" data-aos-delay="250">
-            <div class="timeline-diamond" data-aos="zoom-in" data-aos-delay="150"></div>
-            <div class="timeline-content">
-              <div class="timeline-connector"></div>
-              <div class="bg-white p-6 diagonal-card shadow-md">
-                <h3 class="text-xl font-bold mb-2 text-slate-800">2022 - 2025</h3>
-                <h4 class="text-lg font-semibold mb-2 text-slate-700">Graduated University</h4>
-                <p class="text-slate-600">Graduated with a BSc in Computer Science with honours from Swansea University with a 2:1 achieved.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="200">
-            <div class="timeline-diamond" data-aos="zoom-in" data-aos-delay="100"></div>
-            <div class="timeline-content">
-              <div class="timeline-connector"></div>
-              <div class="bg-white p-6 diagonal-card shadow-md">
-                <h3 class="text-xl font-bold mb-2 text-slate-800">2022</h3>
-                <h4 class="text-lg font-semibold mb-2 text-slate-700">Applied to University</h4>
-                <p class="text-slate-600">Applied to Universities to pursue a career in Computer Science, ultimately deciding to go to Swansea University.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="timeline-item left" data-aos="fade-right" data-aos-delay="250">
-            <div class="timeline-diamond" data-aos="zoom-in" data-aos-delay="150"></div>
-            <div class="timeline-content">
-              <div class="timeline-connector"></div>
-              <div class="bg-white p-6 diagonal-card shadow-md">
-                <h3 class="text-xl font-bold mb-2 text-slate-800">2020 - 2022</h3>
-                <h4 class="text-lg font-semibold mb-2 text-slate-700">A Level Computer Science</h4>
-                <p class="text-slate-600">Pick Computer Science as one of my A Level subjects, igniting my passion for programming and desire to learn more.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="300">
-            <div class="timeline-diamond" data-aos="zoom-in" data-aos-delay="200"></div>
-            <div class="timeline-content">
-              <div class="timeline-connector"></div>
-              <div class="bg-white p-6 diagonal-card shadow-md">
-                <h3 class="text-xl font-bold mb-2 text-slate-800">2015</h3>
-                <h4 class="text-lg font-semibold mb-2 text-slate-700">First Website</h4>
-                <p class="text-slate-600">In a year 7 IT class, I created my first website using HTML.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="diamond-wrapper bottom" data-aos="zoom-in" data-aos-delay="300">
-            <div class="timeline-diamond bottom"></div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -83,145 +31,80 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const timelineHeight = ref('600px')
+const boxInView = ref(false)
+const firstBox = ref(null)
+
+const updateTimelineHeight = () => {
+  timelineHeight.value = `${window.innerHeight * 0.7}px`
+}
+
+let observer = null
+
+const handleIntersection = (entries) => {
+  if (entries[0].isIntersecting) {
+    boxInView.value = true
+    if (observer && firstBox.value) observer.unobserve(firstBox.value)
+  }
+}
+
+onMounted(() => {
+  updateTimelineHeight()
+  window.addEventListener('resize', updateTimelineHeight)
+  observer = new window.IntersectionObserver(handleIntersection, {
+    threshold: 0.3,
+  })
+  if (firstBox.value) {
+    observer.observe(firstBox.value)
+  }
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateTimelineHeight)
+  if (observer && firstBox.value) {
+    observer.unobserve(firstBox.value)
+  }
+})
 </script>
 
 <style scoped>
-.timeline-bar {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 100%;
-  background-color: #475569;
-  z-index: 10;
+@media (max-width: 768px) {
+  .timeline-container {
+    width: 90%;
+  }
+  .timeline-line {
+    height: 80vh !important;
+  }
 }
-
-.timeline-items {
-  position: relative;
-  padding: 20px 0;
+@media (max-width: 480px) {
+  .timeline-line {
+    height: 70vh !important;
+  }
 }
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 100px;
-  display: flex;
-  align-items: center;
-  min-height: 80px;
+.timeline-circle {
+  z-index: 3; 
 }
-
-.timeline-diamond {
-  position: absolute;
-  left: calc(50% + 2px);
-  transform: translateX(-50%) rotate(45deg);
-  width: 20px;
-  height: 20px;
-  background-color: #475569;
-  z-index: 20;
-}
-
-.diamond-wrapper {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 20;
-}
-
-.diamond-wrapper.top {
-  top: -30px;
-}
-
-.timeline-diamond.bottom {
-  width: 30px;
-  height: 30px;
-}
-
-.timeline-diamond.top {
-  width: 30px;
-  height: 30px;
-}
-
-.timeline-content {
-  position: relative;
-  width: 42%;
-  z-index: 15;
-}
-
-.timeline-connector {
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 3px;
-  background-color: #475569;
-  transform: translateY(-50%);
-}
-
-.timeline-item.right .timeline-content {
-  margin-left: auto;
-  margin-right: 30px;
-}
-
-.timeline-item.right .timeline-connector {
-  left: -30px;
-}
-
-.timeline-item.left .timeline-content {
-  margin-right: auto;
-  margin-left: 30px;
-}
-
-.timeline-item.left .timeline-connector {
-  right: -33px;
-  width: 33px;
-}
-
-.timeline-item.right .timeline-diamond {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  left: calc(50% + 2px);
-}
-
-.timeline-item.left .timeline-diamond {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  left: calc(50% + 2px);
-}
-
-
-.diagonal-card {
+.timeline-box {
+  width: 250px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   position: relative;
   background-color: white;
-  clip-path: polygon(
-    10px 0,              
-    calc(100% - 10px) 0,  
-    100% 10px,           
-    100% calc(100% - 10px), 
-    calc(100% - 10px) 100%, 
-    10px 100%,           
-    0 calc(100% - 10px),   
-    0 10px                
-  );
-  border: none;
+  z-index: 1;
 }
-
-
-.diagonal-card::before {
-  content: '';
+.timeline-box::before {
+  content: "";
   position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  background-color: lightgreen; 
-  z-index: -1;
-  clip-path: polygon(
-    13px 0,                
-    calc(100% - 7px) 0,   
-    100% 13px,           
-    100% calc(100% - 7px), 
-    calc(100% - 7px) 100%, 
-    13px 100%,            
-    0 calc(100% - 7px),   
-    0 13px                
-  );
+  top: -2px;
+  left: -2px;
+  width: 12px;
+  height: 13px;
+  background-color: #FFFCF5;
+  border-radius: 0 0 100% 0;
+  border-right: 2px solid #e2e8f0;
+  border-bottom: 2px solid #e2e8f0;
+  z-index: 1;
 }
 </style>
