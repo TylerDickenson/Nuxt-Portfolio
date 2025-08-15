@@ -11,11 +11,11 @@
           <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 100%"></div>
           <div
             ref="firstBox"
-            class="timeline-box absolute bg-white border-2 p-4"
+            class="timeline-box-right absolute bg-white border-2 p-4"
             :style="{
               top: '0',
               left: '50%',
-              marginLeft: boxInView ? '2px' : '200px',
+              marginLeft: boxInView ? '2px' : '600px',
               transform: 'translateY(12px)',
               transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
             }"
@@ -23,6 +23,20 @@
             <h3 class="text-xl font-bold">2025</h3>
             <h4 class="text-lg">Title Here</h4>
             <p>Description text goes here.</p>
+          </div>
+          <div
+            class="timeline-box-left absolute bg-white border-2 p-4"
+            :style="{
+              top: 'calc(25% - 92px)',
+              left: '50%',
+              marginLeft: '-252px', 
+              transform: 'translateY(-12px)',
+              transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
+            }"
+          >
+            <h3 class="text-xl font-bold">2026</h3>
+            <h4 class="text-lg">Second Title</h4>
+            <p>Second description goes here.</p>
           </div>
         </div>
       </div>
@@ -33,13 +47,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const timelineHeight = ref('600px')
 const boxInView = ref(false)
 const firstBox = ref(null)
-
-const updateTimelineHeight = () => {
-  timelineHeight.value = `${window.innerHeight * 0.7}px`
-}
 
 let observer = null
 
@@ -51,8 +60,6 @@ const handleIntersection = (entries) => {
 }
 
 onMounted(() => {
-  updateTimelineHeight()
-  window.addEventListener('resize', updateTimelineHeight)
   observer = new window.IntersectionObserver(handleIntersection, {
     threshold: 0.3,
   })
@@ -62,7 +69,6 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  window.removeEventListener('resize', updateTimelineHeight)
   if (observer && firstBox.value) {
     observer.unobserve(firstBox.value)
   }
@@ -86,7 +92,7 @@ onUnmounted(() => {
 .timeline-circle {
   z-index: 3; 
 }
-.timeline-box {
+.timeline-box-right {
   width: 250px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -94,7 +100,7 @@ onUnmounted(() => {
   background-color: white;
   z-index: 1;
 }
-.timeline-box::before {
+.timeline-box-right::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -104,6 +110,27 @@ onUnmounted(() => {
   background-color: #FFFCF5;
   border-radius: 0 0 100% 0;
   border-right: 2px solid #e2e8f0;
+  border-bottom: 2px solid #e2e8f0;
+  z-index: 1;
+}
+.timeline-box-left {
+  width: 250px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  position: relative;
+  background-color: white;
+  z-index: 1;
+}
+.timeline-box-left::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 12px;
+  height: 13px;
+  background-color: #FFFCF5;
+  border-radius: 0 0 0 100%;
+  border-left: 2px solid #e2e8f0;
   border-bottom: 2px solid #e2e8f0;
   z-index: 1;
 }
