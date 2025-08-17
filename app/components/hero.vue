@@ -15,6 +15,9 @@
       <h1 class="text-6xl md:text-8xl font-bold text-slate-100 drop-shadow-lg">
         Tyler Dickenson
       </h1>
+      <h2 class="text-2xl md:text-3xl font-semibold text-slate-200 mt-4">
+      Software Engineer | Fintech Enthusiast
+    </h2>
     </div>
   </section>
 </template>
