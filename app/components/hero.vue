@@ -19,6 +19,13 @@
       Software Engineer | Fintech Enthusiast
     </h2>
     </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center z-20">
+      <span class="text-slate-200 text-sm mb-2 animate-bounce">Scroll for more</span>
+      <svg class="animate-bounce w-8 h-8 text-slate-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
   </section>
 </template>
 
