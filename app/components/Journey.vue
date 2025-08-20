@@ -28,7 +28,7 @@
             ref="secondBox"
             class="timeline-box-left absolute bg-white border-2 p-4"
             :style="{
-              top: 'calc(25% - 92px)',
+              top: 'calc(25% - 91px)',
               left: '50%',
               marginLeft: secondBoxInView ? '-352px' : '-550px',
               transform: 'translateY(-12px)',
@@ -44,7 +44,7 @@
             ref="thirdBox"
             class="timeline-box-right absolute bg-white border-2 p-4"
             :style="{
-              top: 'calc(25% - 91px)',
+              top: 'calc(50% - 231px)',
               left: '50%',
               marginLeft: thirdBoxInView ? '2px' : '550px',
               transform: 'translateY(12px)',
@@ -59,7 +59,7 @@
             ref="fourthBox"
             class="timeline-box-left absolute bg-white border-2 p-4"
             :style="{
-              top: 'calc(25% - 41px)',
+              top: 'calc(75% - 322px)',
               left: '50%',
               marginLeft: fourthBoxInView ? '-352px' : '-550px',
               transform: 'translateY(-12px)',
