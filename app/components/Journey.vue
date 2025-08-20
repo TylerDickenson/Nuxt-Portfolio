@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-16 text-center text-slate-800">My Journey</h2>
       <div class="timeline-container w-full max-w-3xl mx-auto">
-        <div class="timeline-line w-1 bg-slate-600 mx-auto relative" style="height: 70vh;">
+        <div class="timeline-line w-1 bg-slate-600 mx-auto relative" style="height: 90vh;">
           <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 0%"></div>
           <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 25%"></div>
           <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 50%"></div>
@@ -21,54 +21,54 @@
             }"
           >
             <h3 class="text-xl font-bold">2025</h3>
-            <h4 class="text-lg">Title Here</h4>
-            <p>Description text goes here.</p>
+            <h4 class="text-lg">Open to Opportunities</h4>
+            <p>Looking to get stuck in the tech/finance industry and make a real impact.</p>
           </div>
           <div
             ref="secondBox"
             class="timeline-box-left absolute bg-white border-2 p-4"
             :style="{
-              top: 'calc(25% - 91px)',
+              top: 'calc(25% - 116px)',
               left: '50%',
               marginLeft: secondBoxInView ? '-352px' : '-550px',
               transform: 'translateY(-12px)',
               transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
             }"
           >
-            <h3 class="text-xl font-bold">2026</h3>
-            <h4 class="text-lg">title 2 </h4>
-            <p>test descrip</p>
+            <h3 class="text-xl font-bold">2022 - 2025</h3>
+            <h4 class="text-lg">University Studies</h4>
+            <p>Completed a Bachelor's degree in Computer Science at Swansea University.</p>
           </div>
 
           <div
             ref="thirdBox"
             class="timeline-box-right absolute bg-white border-2 p-4"
             :style="{
-              top: 'calc(50% - 231px)',
+              top: 'calc(50% - 280px)',
               left: '50%',
               marginLeft: thirdBoxInView ? '2px' : '550px',
               transform: 'translateY(12px)',
               transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
             }"
           >
-            <h3 class="text-xl font-bold">2027</h3>
-            <h4 class="text-lg">Title 3</h4>
-            <p>Description for 2027.</p>
+            <h3 class="text-xl font-bold">2020-2022</h3>
+            <h4 class="text-lg">A Levels</h4>
+            <p>Completed A Levels in Computer Science, Product Design and Business Studies.</p>
           </div>
           <div
             ref="fourthBox"
             class="timeline-box-left absolute bg-white border-2 p-4"
             :style="{
-              top: 'calc(75% - 322px)',
+              top: 'calc(75% - 396px)',
               left: '50%',
               marginLeft: fourthBoxInView ? '-352px' : '-550px',
               transform: 'translateY(-12px)',
               transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
             }"
           >
-            <h3 class="text-xl font-bold">2028</h3>
-            <h4 class="text-lg">Title 4</h4>
-            <p>Description for 2028.</p>
+            <h3 class="text-xl font-bold">2015</h3>
+            <h4 class="text-lg">First Website</h4>
+            <p>Built first website using HTML is a school ICT class and got hooked.</p>
           </div>
         </div>
       </div>
