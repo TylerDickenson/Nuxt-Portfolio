@@ -5,5 +5,6 @@
     <Skills />
     <FeatuerdProjects />
     <Journey />
+    <Contact />
   </section>
 </template>
