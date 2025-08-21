@@ -13,6 +13,18 @@
           <a href="https://github.com/tylerdickenson" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center h-full text-gray-600 hover:text-gray-900 transition-colors duration-200">
             <Icon name="simple-icons:github" size="1.5rem" />
           </a>
+
+          <div class="h-5 w-px bg-gray-300"></div>
+        
+
+          <a
+            href="/#contact"
+            @click.prevent="scrollToSection('#contact')"
+            class="inline-block px-1 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 text-base text-gray-800 hover:text-blue-600"
+          >
+            Contact
+          </a>
+
         </div>
         
 
@@ -35,6 +47,8 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const showContactNav = ref(false)
 const scrollThreshold = 300
 const isDarkMode = ref(false)
+const scrollOffset = 60 // Adjust this value to change the offset for scrolling
+
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
@@ -51,5 +65,24 @@ const handleScroll = () => {
 const toggleDarkMode = () => {
   isDarkMode.value = !isDarkMode.value
   console.log('Dark mode toggled:', isDarkMode.value)
+}
+
+const scrollToSection = (hash) => {
+  if (hash === '/' || hash === '#home') {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+    return
+  }
+  const id = hash.replace('#', '')
+  const element = document.getElementById(id)
+  if (element) {
+    const y = element.getBoundingClientRect().top + window.pageYOffset - scrollOffset
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth'
+    })
+  }
 }
 </script>
