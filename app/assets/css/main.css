@@ -2,6 +2,8 @@ html, body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  font-family: 'Oswald', Optima, 'Segoe UI', Arial, sans-serif;
+
 }
 :root {
   --vueuse-safe-area-top: 0px;

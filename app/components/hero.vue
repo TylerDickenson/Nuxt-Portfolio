@@ -12,17 +12,17 @@
       Your browser does not support the video tag.
     </video>
     <div class="relative z-10 flex flex-col items-center justify-center w-full h-full">
-      <h1 class="text-6xl md:text-8xl font-bold text-slate-100 drop-shadow-lg">
+      <h1 class="font-centurion uppercase tracking-widest text-6xl md:text-8xl font-bold text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)]">
         Tyler Dickenson
       </h1>
-      <h2 class="text-2xl md:text-3xl font-semibold text-slate-200 mt-4">
-      Software Engineer | Fintech Enthusiast
-    </h2>
+      <h2 class="font-centurion uppercase tracking-wide text-2xl md:text-3xl font-semibold text-white mt-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
+        Software Engineer | Fintech Enthusiast
+      </h2>
     </div>
 
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center z-20">
-      <span class="text-slate-300 text-sm mb-2 ">Scroll for more</span>
-      <svg class="animate-bounce w-8 h-8 text-slate-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <span class="text-white text-sm mb-2 ">Scroll for more</span>
+      <svg class="animate-bounce w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
       </svg>
     </div>

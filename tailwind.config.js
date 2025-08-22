@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         'cream': 'white', 
       },
+      fontFamily: {
+        centurion: ['Cinzel', 'serif'],
+      },
     },
   },
   plugins: [],
