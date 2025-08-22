@@ -1,7 +1,7 @@
 <template>
   <nav class="fixed bottom-0 left-0 right-0 z-50 transition-all duration-300 flex justify-center px-4 pb-4"
        :class="{ 'translate-y-0': showContactNav, 'translate-y-full': !showContactNav }">
-    <div class="border-2 border-gray- rounded-full px-4 bg-white shadow w-fit transition-colors duration-300">
+    <div class="border-2 border-gray-400 rounded-full px-4 bg-white shadow w-fit transition-colors duration-300">
       <div class="flex h-10 items-center">
         <div class="flex gap-3 items-center">
           <!-- LinkedIn icon -->
