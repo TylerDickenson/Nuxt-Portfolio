@@ -1,7 +1,7 @@
 <template>
   <section id="journey" class="min-h-screen py-16 bg-cream">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-16 text-center text-slate-800">My Journey</h2>
+      <h2 class="font-centurion text-4xl font-bold mb-16 text-center text-slate-800">My Journey</h2>
       <div class="timeline-container w-full max-w-3xl mx-auto">
         <div class="timeline-line w-1 bg-slate-600 mx-auto relative" style="height: 90vh;">
           <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 0%"></div>
@@ -22,7 +22,7 @@
           >
             <h3 class="text-xl font-bold">2025</h3>
             <h4 class="text-lg">Open to Opportunities</h4>
-            <p>Looking to get stuck in the tech/finance industry and make a real impact.</p>
+            <p>Looking to gain experience in the tech/finance industry and make an impact.</p>
           </div>
           <div
             ref="secondBox"

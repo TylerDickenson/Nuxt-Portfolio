@@ -1,7 +1,7 @@
 <template>
   <section id="skills" class="min-h-[50vh] py-10 bg-cream">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-slate-800">Skills</h2>
+      <h2 class="font-centurion text-4xl font-bold mb-8 text-slate-800">Skills</h2>
     </div>
   </section>
 </template>

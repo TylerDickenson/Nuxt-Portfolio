@@ -1,7 +1,7 @@
 <template>
   <section id="about" class="min-h-[50vh] py-20 bg-cream">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-slate-800">About Me</h2>
+      <h2 class="font-centurion text-4xl font-bold mb-8 text-slate-800">About Me</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div class="flex items-center justify-center">
           <div class="max-w-xs overflow-hidden border border-gray-200 shadow-lg">
