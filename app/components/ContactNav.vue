@@ -1,7 +1,7 @@
 <template>
   <nav class="fixed bottom-0 left-0 right-0 z-50 transition-all duration-300 flex justify-center px-4 pb-4"
        :class="{ 'translate-y-0': showContactNav, 'translate-y-full': !showContactNav }">
-    <div class="border-2 border-gray-200 rounded-full px-4 bg-white shadow w-fit transition-colors duration-300">
+    <div class="border-2 border-gray-500 rounded-full px-4 bg-white shadow w-fit transition-colors duration-300">
       <div class="flex h-10 items-center">
         <div class="flex gap-3 items-center">
           <!-- LinkedIn icon -->
@@ -20,7 +20,7 @@
           <a
             href="/#contact"
             @click.prevent="scrollToSection('#contact')"
-            class="inline-block px-1 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 text-base text-gray-800 hover:text-blue-600"
+            class="font-centurion inline-block px-1 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 text-base text-gray-800 hover:text-blue-600"
           >
             Contact
           </a>
