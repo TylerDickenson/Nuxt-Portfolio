@@ -14,5 +14,6 @@ ssh into Server
     git pull
     npm i
     npm run build
+    pm2 restart nuxt
 
     Check website is running correctly 

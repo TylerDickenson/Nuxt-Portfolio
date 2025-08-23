@@ -23,7 +23,7 @@
 
       <!-- Tools Section -->
       <SkillsCarousel 
-        title="Tools & DevOps"
+        title="Tools & Services"
         :skills="toolsIcons"
         :speed="4000"
         icon-size="3rem"
