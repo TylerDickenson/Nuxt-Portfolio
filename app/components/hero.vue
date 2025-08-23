@@ -26,7 +26,7 @@
           <span class="text-white text-sm font-medium">Available for Work</span>
         </div>
         <div class="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
-          <Icon name="ph:map-pin-simple" class="text-white w-4 h-4" />
+          <Icon name="ph:navigation-arrow" class="text-white w-4 h-4 animate-pulse" />
           <span class="text-white text-sm">United Kingdom</span>
         </div>
       </div>
