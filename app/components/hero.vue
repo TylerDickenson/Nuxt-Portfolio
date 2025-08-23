@@ -11,14 +11,27 @@
       <source src="/images/CanaryWharf.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <div class="relative z-10 flex flex-col items-center justify-center w-full h-full mb-20">
+    
+    <div class="relative z-10 flex flex-col items-center justify-center w-full h-full">
       <h1 class="font-centurion uppercase tracking-widest text-6xl md:text-8xl font-extrabold text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)]">
         Tyler Dickenson
       </h1>
       <h2 class="font-centurion uppercase tracking-wide text-5xl font-semibold text-white mt-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] min-h-[2.5rem]">
-  <span>{{ typedText }}</span><span class="animate-pulse">|</span>
-</h2>
+        <span>{{ typedText }}</span><span class="animate-pulse">|</span>
+      </h2>
+      <!-- transpatent bubbles -->
+      <div class="mt-10 z-20 flex items-center justify-center gap-4">
+        <div class="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
+          <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+          <span class="text-white text-sm font-medium">Available for Work</span>
+        </div>
+        <div class="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+          <Icon name="ph:map-pin-simple" class="text-white w-4 h-4" />
+          <span class="text-white text-sm">United Kingdom</span>
+        </div>
+      </div>
     </div>
+
 
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center z-20">
       <span class="text-white text-md mb-2  font-centurion">Scroll for more</span>
