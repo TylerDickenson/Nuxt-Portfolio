@@ -18,8 +18,8 @@
         
 
           <a
-            href="/#contact"
-            @click.prevent="scrollToSection('#contact')"
+            href="/#footer"
+            @click.prevent="scrollToSection('#footer')"
             class="font-centurion inline-block px-1 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 text-base text-gray-800 hover:text-black"
           >
             Contact
