@@ -9,9 +9,12 @@
 
 <script setup>
 import { useHead } from '#imports'
-
 useHead({
   link: [
+    {
+      rel: 'icon',
+      href: '/images/tyler-profile.png'
+    },
     {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap'
