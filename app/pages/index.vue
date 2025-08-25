@@ -8,7 +8,6 @@
     <FeatuerdProjects />
     <Divider />
     <Journey />
-    <Divider />
-    <Contact />
+    <Footer />
   </section>
 </template>
