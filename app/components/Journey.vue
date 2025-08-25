@@ -1,6 +1,6 @@
 <template>
   <section id="journey" class="min-h-screen py-16 bg-cream">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 mb-12">
       <h2 class="font-centurion text-4xl font-bold mb-16 text-center text-slate-800">My Journey</h2>
       <div class="timeline-container w-full max-w-3xl mx-auto">
         <div class="relative" style="height: 90vh;">
