@@ -4,7 +4,7 @@
     <Swiper
       :modules="[Autoplay]"
       :slides-per-view="'auto'"
-      :space-between="30"
+      :space-between="25"
       :loop="true"
       :autoplay="{
         delay: 0,
@@ -20,7 +20,7 @@
         :key="`${title}-${skill.name}-${Math.random()}`"
         class="!w-auto"
       >
-        <div class="skill-item bg-white rounded-xl p-6 border border-gray-300 hover:shadow-lg transition-all duration-300 text-center w-32 h-32 flex flex-col items-center justify-center">
+        <div class="skill-item bg-white rounded-xl p-2 border border-gray-300 hover:shadow-lg transition-all duration-300 text-center w-28 h-28 flex flex-col items-center justify-center">
           <Icon :name="skill.icon" :size="iconSize" class="mb-2" />
           <span class="text-sm font-medium text-gray-700">{{ skill.name }}</span>
         </div>

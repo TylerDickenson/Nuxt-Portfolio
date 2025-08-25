@@ -37,6 +37,7 @@
 
 // Frontend skills
 const frontendSkills = [
+  { name: 'Nuxt.js', icon: 'logos:nuxt-icon' },
   { name: 'Vue.js', icon: 'logos:vue' },
   { name: 'React', icon: 'logos:react' },
   { name: 'JavaScript', icon: 'logos:javascript' },
