@@ -3,15 +3,16 @@
     <div class="container mx-auto px-4">
       <h2 class="font-centurion text-4xl font-bold mb-16 text-center text-slate-800">My Journey</h2>
       <div class="timeline-container w-full max-w-3xl mx-auto">
-        <div class="timeline-line w-1 bg-slate-600 mx-auto relative" style="height: 90vh;">
+        <div class="relative" style="height: 90vh;">
+          <div class="timeline-line w-2 bg-slate-400 mx-auto absolute left-1/2 -translate-x-1/2" style="height: calc(100% - 12px); top: 12px;"></div>
           <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 0%"></div>
           <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 25%"></div>
           <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 50%"></div>
           <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 75%"></div>
-          <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: 100%"></div>
+          <div class="timeline-circle absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-slate-500" style="top: calc(100% - 2px)"></div>
           <div
             ref="firstBox"
-            class="timeline-box-right absolute bg-white border-2 p-4"
+            class="timeline-box-right absolute bg-white border-2 border-slate-400 p-4"
             :style="{
               top: '0',
               left: '50%',
@@ -20,55 +21,75 @@
               transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
             }"
           >
-            <h3 class="text-xl font-bold">2025</h3>
-            <h4 class="text-lg">Open to Opportunities</h4>
-            <p>Looking to gain experience in the tech/finance industry and make an impact.</p>
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center">
+                <Icon name="ph:rocket" class="w-4 h-4 text-green-600" />
+              </div>
+              <h3 class="font-centurion text-xl font-bold text-slate-800">2025</h3>
+            </div>
+            <h4 class="font-centurion text-lg font-semibold text-slate-700 mb-2">Open to Opportunities</h4>
+            <p class="text-slate-600 leading-relaxed">Looking to gain experience in the tech/finance industry and make an impact.</p>
           </div>
           <div
             ref="secondBox"
-            class="timeline-box-left absolute bg-white border-2 p-4"
+            class="timeline-box-left absolute bg-white border-2 border-slate-400 p-4"
             :style="{
-              top: 'calc(25% - 116px)',
+              top: 'calc(25% - 136px)',
               left: '50%',
               marginLeft: secondBoxInView ? '-352px' : '-550px',
               transform: 'translateY(-12px)',
               transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
             }"
           >
-            <h3 class="text-xl font-bold">2022 - 2025</h3>
-            <h4 class="text-lg">University Studies</h4>
-            <p>Completed a Bachelor's degree in Computer Science at Swansea University.</p>
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center">
+                <Icon name="ph:graduation-cap" class="w-4 h-4 text-blue-600" />
+              </div>
+              <h3 class="font-centurion text-xl font-bold text-slate-800">2022 - 2025</h3>
+            </div>
+            <h4 class="font-centurion text-lg font-semibold text-slate-700 mb-2">University Studies</h4>
+            <p class="text-slate-600 leading-relaxed">Completed a Bachelor's degree in Computer Science at Swansea University.</p>
           </div>
 
           <div
             ref="thirdBox"
-            class="timeline-box-right absolute bg-white border-2 p-4"
+            class="timeline-box-right absolute bg-white border-2 border-slate-400 p-4"
             :style="{
-              top: 'calc(50% - 280px)',
+              top: 'calc(50% - 320px)',
               left: '50%',
               marginLeft: thirdBoxInView ? '2px' : '550px',
               transform: 'translateY(12px)',
               transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
             }"
           >
-            <h3 class="text-xl font-bold">2020-2022</h3>
-            <h4 class="text-lg">A Levels</h4>
-            <p>Completed A Levels in Computer Science, Product Design and Business Studies.</p>
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-6 h-6 bg-purple-100 rounded-lg flex items-center justify-center">
+                <Icon name="ph:student" class="w-4 h-4 text-purple-600" />
+              </div>
+              <h3 class="font-centurion text-xl font-bold text-slate-800">2020-2022</h3>
+            </div>
+            <h4 class="font-centurion text-lg font-semibold text-slate-700 mb-2">A Levels</h4>
+            <p class="text-slate-600 leading-relaxed">Completed A Levels in Computer Science, Product Design and Business Studies.</p>
           </div>
           <div
             ref="fourthBox"
-            class="timeline-box-left absolute bg-white border-2 p-4"
+            class="timeline-box-left absolute bg-white border-2 border-slate-400 p-4"
             :style="{
-              top: 'calc(75% - 396px)',
+              top: 'calc(75% - 456px)',
               left: '50%',
               marginLeft: fourthBoxInView ? '-352px' : '-550px',
               transform: 'translateY(-12px)',
               transition: 'margin-left 0.7s cubic-bezier(0.4,0,0.2,1)'
             }"
           >
-            <h3 class="text-xl font-bold">2015</h3>
-            <h4 class="text-lg">First Website</h4>
-            <p>Built first website using HTML is a school ICT class and got hooked.</p>
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-6 h-6 bg-orange-100 rounded-lg flex items-center justify-center">
+                <Icon name="ph:code" class="w-4 h-4 text-orange-600" />
+              </div>
+              <h3 class="font-centurion text-xl font-bold text-slate-800">2015</h3>
+            </div>
+            <h4 class="font-centurion text-lg font-semibold text-slate-700 mb-2">First Website</h4>
+            <p class="text-slate-600 leading-relaxed">Built first website using HTML in a school ICT class and got hooked.</p>
           </div>
         </div>
       </div>
@@ -201,8 +222,8 @@ onUnmounted(() => {
   height: 13px;
   background-color: #FFFCF5;
   border-radius: 0 0 100% 0;
-  border-right: 2px solid #e2e8f0;
-  border-bottom: 2px solid #e2e8f0;
+  border-right: 2px solid rgb(148 163 184);
+  border-bottom: 2px solid rgb(148 163 184);
   z-index: 1;
 }
 .timeline-box-left {
@@ -222,8 +243,8 @@ onUnmounted(() => {
   height: 13px;
   background-color: #FFFCF5;
   border-radius: 0 0 0 100%;
-  border-left: 2px solid #e2e8f0;
-  border-bottom: 2px solid #e2e8f0;
+  border-left: 2px solid rgb(148 163 184);
+  border-bottom: 2px solid rgb(148 163 184);
   z-index: 1;
 }
 </style>
