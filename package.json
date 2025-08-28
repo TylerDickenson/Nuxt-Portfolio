@@ -6,7 +6,7 @@
     "build": "node --max-old-space-size=4096 ./node_modules/.bin/nuxt build",
     "dev": "nuxt dev",
     "generate": "node --max-old-space-size=4096 ./node_modules/.bin/nuxt generate",
-    "preview": "nuxt preview",
+    "preview": "node --max-old-space-size=4096 ./node_modules/.bin/nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
