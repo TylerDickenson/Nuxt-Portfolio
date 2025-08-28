@@ -18,5 +18,8 @@
     "swiper": "^11.2.10",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@iconify-json/ph": "^1.2.2"
   }
 }

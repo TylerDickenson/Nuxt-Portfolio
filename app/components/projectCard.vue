@@ -1,11 +1,17 @@
 <template>
-    <div class="bg-white rounded-3xl border border-gray-300 overflow-hidden">
+    <div 
+      class="bg-white rounded-3xl border border-gray-300 overflow-hidden transform transition-all duration-300 hover:scale-[1.02]"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      :data-aos-delay="animationDelay"
+      data-aos-once="true"
+    >
       <div class="grid grid-cols-1 md:grid-cols-2 h-full">
         <div class="relative overflow-hidden">
           <img
             :src="project.image"
             :alt="project.title"
-            class="w-full h-64 md:h-full object-cover"
+            class="w-full h-64 md:h-full object-cover transform transition-transform duration-500 hover:scale-110"
           />
           <div class="absolute inset-0"></div>
         </div>
@@ -70,6 +76,10 @@
       validator: (project) => {
         return project.title && project.description && project.image
       }
+    },
+    animationDelay: {
+      type: Number,
+      default: 0
     }
   })
   </script>
