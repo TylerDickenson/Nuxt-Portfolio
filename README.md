@@ -1,6 +1,6 @@
 Portfolio Website Built using Nuxt.js 
 
-www.finsocial.com
+www.tylerdickenson.com
 
 To run Dev Server 
     nvm use 20
