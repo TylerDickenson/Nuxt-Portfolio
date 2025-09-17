@@ -9,9 +9,9 @@
         
         <div class="flex justify-center">
           <div class="text-center">
-            <div class="w-64 h-96 mx-auto overflow-hidden rounded-2xl border border-gray-300 mb-6">
+            <div class="w-96 h-96 mx-auto overflow-hidden rounded-2xl border border-gray-300 mb-6">
               <img src="/images/tyler-profile.png" alt="Tyler Dickenson" 
-                class="w-full h-full object-cover object-center scale-125" />
+                class="w-full h-full object-cover object-center scale-125 mt-12" />
             </div>
           </div>
         </div>
