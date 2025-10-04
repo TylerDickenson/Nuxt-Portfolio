@@ -11,3 +11,15 @@
     <Footer />
   </section>
 </template>
+
+<script setup>
+useHead({
+  title: 'Tyler Dickenson | Software Engineer',
+  meta: [
+    { 
+      name: 'description', 
+      content: "Portfolio of Tyler Dickenson, a Computer Science graduate specializing in full-stack development and innovative solutions in the fintech industry." 
+    }
+  ]
+})
+</script>
