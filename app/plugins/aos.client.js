@@ -1,16 +1,20 @@
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default defineNuxtPlugin((nuxtApp) => {
-  if (import.meta.client) {
-    nuxtApp.hook('app:mounted', () => {
-      AOS.init({
-        duration: 500,  // Reduced from 800 to 500 for faster animations
-        easing: 'ease-out-cubic',
-        once: true,
-        offset: 50,     // Smaller offset for earlier animation triggering
-        delay: 0        // No default delay
-      });
-    });
-  }
+  nuxtApp.hook('app:mounted', () => {
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
+    script.onload = () => {
+      if (window.AOS) {
+        window.AOS.init({
+          duration: 500,
+          easing: 'ease-out-cubic',
+          once: true,
+          offset: 50,
+          delay: 0
+        });
+      }
+    };
+    document.head.appendChild(script);
+  });
 });
