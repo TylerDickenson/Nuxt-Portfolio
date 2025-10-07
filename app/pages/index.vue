@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col items-center justify-center min-h-[60vh] text-center bg-cream">
+  <section class="flex flex-col items-center justify-center min-h-[60vh] text-center bg-cream dark:bg-gray-800 transition-colors duration-300">
     <Hero />
     <About />
     <Divider />
