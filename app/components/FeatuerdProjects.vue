@@ -1,9 +1,9 @@
 <template>
-  <section id="featured-projects" class="min-h-[50vh] py-20 bg-cream">
+  <section id="featured-projects" class="min-h-[50vh] py-20 bg-cream dark:bg-gray-800 transition-colors duration-300">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="font-centurion text-4xl font-bold mb-4 text-slate-800">Featured Projects</h2>
-        <p class="text-lg text-gray-600">A showcase of my academic work and personal projects</p>
+        <h2 class="font-centurion text-4xl font-bold mb-4 text-slate-800 dark:text-gray-100">Featured Projects</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-200">A showcase of my academic work and personal projects</p>
       </div>
       
       <div class="space-y-8 max-w-6xl mx-auto">

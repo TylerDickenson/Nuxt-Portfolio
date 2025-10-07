@@ -59,7 +59,7 @@ const backendSkills = [
   { name: 'Firebase', icon: 'logos:firebase-icon' },
 ]
 
-// Tools & DevOps
+// Tools
 const toolsIcons = [
   { name: 'Git', icon: 'logos:git-icon' },
   { name: 'GitHub', icon: 'logos:github-icon' },
