@@ -1,9 +1,9 @@
 <template>
-  <section id="skills" class="min-h-[60vh] py-20 bg-cream">
+  <section id="skills" class="min-h-[60vh] py-20 bg-cream dark:bg-gray-800 transition-colors duration-300">
     <div class="container mx-auto px-4">
       <div class="text-center mb-10">
-        <h2 class="font-centurion text-4xl font-bold mb-4 text-slate-800">Skills</h2>
-        <p class="text-lg text-gray-700">Technologies I've worked with on Personal Projects and University Assignments</p>
+        <h2 class="font-centurion text-4xl font-bold mb-4 text-slate-800 dark:text-gray-100">Skills</h2>
+        <p class="text-lg text-gray-700 dark:text-gray-200">Technologies I've worked with on Personal Projects and University Assignments</p>
       </div>
 
       <!-- Frontend Section -->

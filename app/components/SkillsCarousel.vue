@@ -1,6 +1,6 @@
 <template>
   <div class="mb-8">
-    <h3 class="font-centurion text-2xl font-bold text-center mb-4 text-gray-700">{{ title }}</h3>
+    <h3 class="font-centurion text-2xl font-bold text-center mb-4 text-gray-700 dark:text-gray-100">{{ title }}</h3>
     <Swiper
       :modules="[Autoplay]"
       :slides-per-view="'auto'"
@@ -20,9 +20,9 @@
         :key="`${title}-${skill.name}-${Math.random()}`"
         class="!w-auto"
       >
-        <div class="skill-item bg-white rounded-xl p-2 border border-gray-300 hover:shadow-lg transition-all duration-300 text-center w-28 h-28 flex flex-col items-center justify-center">
+        <div class="skill-item bg-white dark:bg-gray-700 rounded-xl p-2 border border-gray-300 hover:shadow-lg transition-all duration-300 text-center w-28 h-28 flex flex-col items-center justify-center">
           <Icon :name="skill.icon" :size="iconSize" class="mb-2" />
-          <span class="text-sm font-medium text-gray-700">{{ skill.name }}</span>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-100">{{ skill.name }}</span>
         </div>
       </SwiperSlide>
     </Swiper>
