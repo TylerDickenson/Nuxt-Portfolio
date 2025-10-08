@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@vueuse/motion/nuxt', '@nuxtjs/color-mode'],
 
-  // @ts-ignore - colorMode is provided by @nuxtjs/color-mode module
   colorMode: {
     classSuffix: ''
   },

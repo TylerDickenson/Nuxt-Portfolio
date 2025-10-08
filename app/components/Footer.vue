@@ -1,8 +1,8 @@
 <template>
-    <footer class="bg-gray-200 h-[35vh] w-screen -mb-8 flex items-center" id="footer">
+    <footer class="bg-gray-200 dark:bg-gray-600 h-[35vh] w-screen -mb-8 flex items-center" id="footer">
         <div class="max-w-5xl mx-auto px-8">
             <div class="grid grid-cols-3 items-center gap-8">
-                <div class="text-gray-600 text-center">
+                <div class="text-gray-600 dark:text-gray-200 text-center">
                     <p class="font-centurion font-semibold text-lg mb-1">Get in touch</p>
                     <p class="text-md">TJDickenson75@gmail.com</p>
                     <p class="text-md">+44 7944 158387</p>
@@ -12,7 +12,7 @@
                     <div class="w-px h-32 bg-gray-400"></div>
                 </div>
                 
-                <div class="text-gray-600 text-center ">
+                <div class="text-gray-600 dark:text-gray-200 text-center ">
                     <p class="font-centurion font-semibold text-lg mb-1">Other Information</p>
 
                     <p class="mb-1">

@@ -1,7 +1,7 @@
 <template>
-  <section id="journey" class="min-h-screen py-16 bg-cream">
+  <section id="journey" class="min-h-screen py-16 bg-cream dark:bg-gray-800 transition-colors duration-300">
     <div class="container mx-auto px-4 mb-12">
-      <h2 class="font-centurion text-4xl font-bold mb-16 text-center text-slate-800">My Journey</h2>
+      <h2 class="font-centurion text-4xl font-bold mb-16 text-center text-slate-800 dark:text-gray-100">My Journey</h2>
       <div class="timeline-container w-full max-w-3xl mx-auto">
         <div class="relative" style="height: 90vh;">
           <div class="timeline-line w-2 bg-slate-400 mx-auto absolute left-1/2 -translate-x-1/2" style="height: calc(100% - 12px); top: 12px;"></div>
@@ -232,6 +232,7 @@ onUnmounted(() => {
   border-bottom-left-radius: 20px;
   position: relative;
   background-color: white;
+  
   z-index: 1;
 }
 .timeline-box-left::before {
